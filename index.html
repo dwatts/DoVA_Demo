@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>DoVA Demo App</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+    <link href="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+
+    <div id="infoDiv">
+      <div class="infoBox">
+        <span class="infoTitle">DoVA Demo Data Viewer</span>
+        <span class="infoSubTitle">Click on a building footprint to view information</span>
+        <span id="count">3</span>
+      </div>
+    </div>
+
+    <div id="titleDiv">
+      <span class="titleSpan">Database of Vernacular Architecture (DoVA)</span>
+      <span class="subTitleSpan">Demo Data Viewer 2.25.2023</span>
+    </div>
+    
+    <div id="sidebar">
+      <div id="siteInfo">
+        <h2 id="siteNameText"></h2>
+        <h3 id="siteAddText"></h3>
+        <h3 id="cityStateText"></h3>
+        <h4 id="evidenceText"></h4>
+      </div>
+      <hr/>
+      <div id="selectHolder">
+        <h4>Select a Building Aspect</h4>
+        <select id="tableSelect">
+          <option value="0">Site Investigator</option>
+          <option value="1">Building Phase(s)</option>
+          <option value="2">Building Phase: Section</option>
+          <option value="3">Earthfast Foundation</option>
+          <option value="4">Masonry Foundation</option>
+          <option value="5">Wood Piers/Stumps</option>
+          <option value="6">Chimney Hearth</option>
+          <option value="7">Cellar/Sub-Floor</option>
+          <option value="8">Roof</option>
+          <option value="9">Shingles</option>
+          <option value="10">Windows</option>
+          <option value="11">Dormers</option>
+          <option value="12">Brick Characteristics</option>
+          <option value="13">Miscellaneous Finishes</option>
+        </select>
+      </div>
+      <hr/>
+      <div id="tableHolder">
+        <h3 id="tableTitle">Site Investigator(s)</h3>
+        <div id="siteInvest">
+          <div id="investDiv"></div>
+        </div>
+        <div id="buildPhase">
+          <div id="phaseDiv"></div>
+          <div id='buttonHolder'>
+          </div>
+        </div>
+        <div id="buildPhaseSection">
+          <div id="phaseSecDiv"></div>
+        </div>
+        <div id="earthfastFound">
+          <div id="earthfastDiv"></div>
+        </div>
+        <div id="masonryFound">
+          <div id="masFoundDiv"></div>
+        </div>
+        <div id="woodPiers">
+          <div id="woodPiersDiv"></div>
+        </div>
+        <div id="chimney">
+          <div id="chimneyDiv"></div>
+        </div>
+        <div id="cellar">
+          <div id="cellarDiv"></div>
+        </div>
+        <div id="roof">
+          <div id="roofDiv"></div>
+        </div>
+        <div id="shingles">
+          <div id="shinglesDiv"></div>
+        </div>
+        <div id="windows">
+          <div id="windowsDiv"></div>
+        </div>
+        <div id="dormers">
+          <div id="dormersDiv"></div>
+        </div>
+        <div id="brick">
+          <div id="brickDiv"></div>
+        </div>
+        <div id="miscFinish">
+          <div id="miscDiv"></div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div id="map"></div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-sidebar@0.2.4/src/L.Control.Sidebar.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
